@@ -1,0 +1,475 @@
+
+.partnership-section {
+  padding: 120px 0;
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.02) 0%, rgba(0, 255, 255, 0.02) 100%);
+}
+
+.partnership-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.partnership-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeIn 1s ease 0.2s both;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.partner-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  animation: slideInUp 1s ease 0.4s both;
+}
+
+.partner-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+}
+
+.partner-logo {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: pulse 2s infinite;
+}
+
+.partner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.partner-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #00ffff;
+}
+
+.partner-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
+
+.partner-category {
+  display: inline-block;
+  background: linear-gradient(45deg, #8a2be2, #ffd700);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.partner-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.partner-card:hover .partner-glow {
+  opacity: 1;
+}
+
+.integrations-section {
+  margin-top: 4rem;
+}
+
+.integrations-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffd700;
+  animation: fadeIn 1s ease 0.6s both;
+}
+
+.integrations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.integration-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: slideInUp 1s ease 0.8s both;
+}
+
+.integration-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.integration-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.integration-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #8a2be2;
+}
+
+.integration-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.integration-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.detail-tag {
+  background: rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #00ffff;
+}
+
+.integration-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 25px;
+  padding: 1px;
+  background: linear-gradient(45deg, #8a2be2, #ffd700, #00ffff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: exclude;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.integration-card:hover .integration-border {
+  opacity: 0.6;
+}
+
+.ecosystem-map {
+  margin-top: 4rem;
+  animation: fadeIn 1s ease 1s both;
+}
+
+.ecosystem-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #ffd700;
+}
+
+.ecosystem-visual {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ecosystem-center {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, #00ffff, #8a2be2);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+}
+
+.center-logo {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 800;
+}
+
+.center-title {
+  font-size: 0.7rem;
+  color: white;
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.ecosystem-orbit {
+  position: absolute;
+  border: 2px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: rotate3d 20s linear infinite;
+}
+
+.orbit-1 {
+  width: 220px;
+  height: 220px;
+  animation-duration: 15s;
+}
+
+.orbit-2 {
+  width: 320px;
+  height: 320px;
+  animation-duration: 25s;
+  animation-direction: reverse;
+}
+
+.orbit-3 {
+  width: 420px;
+  height: 420px;
+  animation-duration: 35s;
+}
+
+.orbit-item {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 25px;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+  animation: counterRotate 20s linear infinite;
+}
+
+.orbit-1 .orbit-item {
+  animation-duration: 15s;
+}
+
+.orbit-2 .orbit-item {
+  animation-duration: 25s;
+  animation-direction: reverse;
+}
+
+.orbit-3 .orbit-item {
+  animation-duration: 35s;
+}
+
+.orbit-1 .orbit-item:nth-child(1) {
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 255, 255, 0.2);
+}
+
+.orbit-1 .orbit-item:nth-child(2) {
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 215, 0, 0.2);
+}
+
+.orbit-1 .orbit-item:nth-child(3) {
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(138, 43, 226, 0.2);
+}
+
+.orbit-2 .orbit-item:nth-child(1) {
+  top: -15px;
+  left: 25%;
+  transform: translateX(-50%);
+  background: rgba(0, 255, 255, 0.15);
+}
+
+.orbit-2 .orbit-item:nth-child(2) {
+  top: -15px;
+  right: 25%;
+  transform: translateX(50%);
+  background: rgba(255, 215, 0, 0.15);
+}
+
+.orbit-2 .orbit-item:nth-child(3) {
+  bottom: -15px;
+  left: 25%;
+  transform: translateX(-50%);
+  background: rgba(138, 43, 226, 0.15);
+}
+
+.orbit-2 .orbit-item:nth-child(4) {
+  bottom: -15px;
+  right: 25%;
+  transform: translateX(50%);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.orbit-3 .orbit-item:nth-child(1) {
+  top: -15px;
+  left: 20%;
+  transform: translateX(-50%);
+}
+
+.orbit-3 .orbit-item:nth-child(2) {
+  top: -15px;
+  right: 20%;
+  transform: translateX(50%);
+}
+
+.orbit-3 .orbit-item:nth-child(3) {
+  right: -15px;
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+.orbit-3 .orbit-item:nth-child(4) {
+  right: -15px;
+  bottom: 30%;
+  transform: translateY(50%);
+}
+
+.orbit-3 .orbit-item:nth-child(5) {
+  bottom: -15px;
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+@keyframes counterRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+@media (max-width: 968px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .integrations-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .partnership-section {
+    padding: 80px 0;
+  }
+
+  .partners-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .partner-card {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .ecosystem-visual {
+    height: 350px;
+  }
+
+  .ecosystem-center {
+    width: 80px;
+    height: 80px;
+  }
+
+  .center-logo {
+    font-size: 1.8rem;
+  }
+
+  .orbit-1 {
+    width: 160px;
+    height: 160px;
+  }
+
+  .orbit-2 {
+    width: 240px;
+    height: 240px;
+  }
+
+  .orbit-3 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .orbit-item {
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .partnership-container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .ecosystem-visual {
+    height: 300px;
+  }
+
+  .ecosystem-center {
+    width: 60px;
+    height: 60px;
+  }
+
+  .center-logo {
+    font-size: 1.5rem;
+  }
+
+  .orbit-1 {
+    width: 120px;
+    height: 120px;
+  }
+
+  .orbit-2 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .orbit-3 {
+    width: 240px;
+    height: 240px;
+  }
+}

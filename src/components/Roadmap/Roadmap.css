@@ -1,0 +1,337 @@
+
+.roadmap-section {
+  padding: 120px 0;
+  position: relative;
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.02) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.roadmap-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.roadmap-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeIn 1s ease 0.2s both;
+}
+
+.roadmap-timeline {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.roadmap-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease;
+}
+
+.roadmap-item.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.roadmap-item:nth-child(even) {
+  flex-direction: row-reverse;
+  transform: translateX(50px);
+}
+
+.roadmap-item:nth-child(even).animate {
+  transform: translateX(0);
+}
+
+.timeline-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.connector-line {
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(180deg, #00ffff, #8a2be2);
+  margin-bottom: 1rem;
+}
+
+.roadmap-item:first-child .connector-line {
+  background: linear-gradient(180deg, transparent, #00ffff);
+}
+
+.roadmap-item:last-child .connector-line {
+  background: linear-gradient(180deg, #8a2be2, transparent);
+}
+
+.timeline-marker {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 0 20px currentColor;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-marker::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: inherit;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.roadmap-content {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.roadmap-content:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+}
+
+.roadmap-header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.quarter-badge {
+  background: linear-gradient(45deg, #00ffff, #8a2be2);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.phase-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffd700;
+  flex: 1;
+}
+
+.status-indicator {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.roadmap-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.roadmap-item-detail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.roadmap-item-detail:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(10px);
+}
+
+.item-icon {
+  color: #00ffff;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.item-text {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.roadmap-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.05) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.roadmap-content:hover .roadmap-glow {
+  opacity: 1;
+}
+
+.roadmap-cta {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+  animation: slideInUp 1s ease 1.2s both;
+}
+
+.cta-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #00ffff, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background: linear-gradient(45deg, #00ffff, #8a2be2);
+  border: none;
+  color: white;
+  padding: 1.2rem 3rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(0, 255, 255, 0.4);
+}
+
+.button-sparkle {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s ease;
+}
+
+.cta-button:hover .button-sparkle {
+  left: 100%;
+}
+
+@media (max-width: 768px) {
+  .roadmap-section {
+    padding: 80px 0;
+  }
+
+  .roadmap-item {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    transform: translateY(50px) !important;
+  }
+
+  .roadmap-item.animate {
+    transform: translateY(0) !important;
+  }
+
+  .timeline-connector {
+    order: -1;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .connector-line {
+    width: 100px;
+    height: 2px;
+    margin: 0 1rem;
+  }
+
+  .roadmap-content {
+    width: 100%;
+  }
+
+  .roadmap-header-content {
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .roadmap-cta {
+    padding: 2rem;
+  }
+
+  .cta-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .cta-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .roadmap-container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .roadmap-content {
+    padding: 2rem;
+  }
+
+  .phase-title {
+    font-size: 1.4rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
